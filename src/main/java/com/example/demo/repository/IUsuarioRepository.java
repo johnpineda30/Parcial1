@@ -7,4 +7,5 @@ import com.example.demo.models.UsuarioP;
 public interface IUsuarioRepository extends JpaRepository<UsuarioP, Long>{
 
 	
+	
 }

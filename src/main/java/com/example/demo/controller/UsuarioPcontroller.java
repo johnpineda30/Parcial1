@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.demo.models.UsuarioP;
 import com.example.demo.repository.IUsuarioRepository;
 
+
 @Controller
-@RequestMapping("/UsuarioP")
+@RequestMapping("/usuario")
 
 public class UsuarioPcontroller {
 
@@ -19,16 +20,16 @@ public class UsuarioPcontroller {
 	
 	@GetMapping("/registro")
 	private String saveFormulary (UsuarioP usuariop) {
-		return "formulary";
+		System.out.print("Inicio");
+		return "formulario";
 		
 	}
 	@PostMapping ("/registro")
 	private String registroPersona (UsuarioP usuariop) {
 		System.out.print("si salvo");
-		usuariopRepository.save(usuariop);
-		
-		return "formulary";
-		
+		usuariopRepository.save(usuariop);		
+		return "formulario";
+	
 	}
 	
 	
