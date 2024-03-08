@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Formulario de Registro</h2>
+        <form action="#" th:action="@{/UsuarioP/registro}" th:object="${usuariop}" method="post">
+            <div class="form-group">
+                <label for="nombres">nombre_usuario:</label>
+                <input type="text" th:field="*{nombre_usuario}" class="form-control" id="nombres" placeholder="Ingrese sus nombres">
+            </div>
+            <div class="form-group">
+                <label for="apellidos">correo_electronico:</label>
+                <input type="text" th:field="*{correo_electronico}" class="form-control" id="apellidos" placeholder="Ingrese sus apellidos">
+            </div>
+            <div class="form-group">
+                <label for="cedula">contraseña:</label>
+                <input type="text" th:field="*{contraseña}" class="form-control" id="cedula" placeholder="Ingrese su cédula">
+            </div>
+            <div class="form-group">
+                <label for="correo">telefono:</label>
+                <input type="email" th:field="*{telefono}" class="form-control" id="correo" placeholder="Ingrese su correo">
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
