@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
-    <title>Registro</title>
+    <meta charset="UTF-8">
+    <title>Formulario de registro de Copilot</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -9,22 +10,22 @@
         <h2>Formulario de Registro</h2>
         <form action="#" th:action="@{/usuario/registro}" th:object="${usuariop}" method="post">
             <div class="form-group">
-                <label for="nombres">nombre_usuario:</label>
-                <input type="text" th:field="*{nombre_usuario}" class="form-control" id="nombre_usuario" placeholder="Ingrese sus nombres">
+                <label for="nombre_usuario">nombre_usuario:</label>
+                <input type="text" th:field="*{nombre_usuario}" id="nombre_usuario" name="nombre_usuario" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="correo">correo_electronico:</label>
-                <input type="text" th:field="*{correo}" class="form-control" id="correo" placeholder="Ingrese sus apellidos">
+                <label for="correo_electronico">correo_electronico:</label>
+                <input type="email" id="correo_electronico" name="correo_electronico" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="cedula">contraseña:</label>
-                <input type="text" th:field="*{contraseña}" class="form-control" id="contraseña" placeholder="Ingrese su cédula">
+                <label for="contraseña">contraseña:</label>
+                <input type="password" id="contraseña" name="contraseña" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="telefono">telefono:</label>
-                <input type="text" th:field="*{telefono}" class="form-control" id="telefono" placeholder="Ingrese su correo">
+                <input type="tel" id="telefono" name="telefono" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary">Registrar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
 </body>
